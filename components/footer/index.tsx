@@ -1,4 +1,5 @@
-import Logo from '../../assets/icons/logo';
+import images from '../../assets/images';
+
 
 const Footer = () => {
   return (
@@ -6,7 +7,8 @@ const Footer = () => {
       <div className="container">
         <div className="site-footer__top">
           <div className="site-footer__description">
-            <h6><Logo /> <span>E</span>-Shop</h6>
+            <img src="{images.logo}" alt="LOGO" />
+          <article style={{backgroundImage: 'url(/images/featured-1.jpg)'}} className="featured-item featured-item-large"></article>
             <p>House My Brand designs clothing for the young, the old & everyone in between – but most 
               importantly, for the fashionable</p>
             <ul className="site-footer__social-networks">

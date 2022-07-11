@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import useOnClickOutside from 'use-onclickoutside';
-import Logo from '../../assets/icons/logo';
+import images from '../../assets/images';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RootState } from 'store';
@@ -52,18 +52,20 @@ const Header = ({ isErrorPage }: HeaderType) => {
   useOnClickOutside(navRef, closeMenu);
   useOnClickOutside(searchRef, closeSearch);
 
+  console.log(images,"images");
+
   return(
     <header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
       <div className="container">
-        <Link href="/">
-          <a><h1 className="site-logo"><Logo />E-Shop</h1></a>
+        <Link href="#">
+          <img className="" src={images.logo} alt="LOGO" />
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
           <Link href="/products">
-            <a>Products</a>
+            商品列表
           </Link>
-          <a href="#">Inspiration</a>
-          <a href="#">Rooms</a>
+          <a href="/story">我們的故事</a>
+          <a href="/about">關於我們</a>
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>
 

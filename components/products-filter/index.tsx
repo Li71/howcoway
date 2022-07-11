@@ -28,7 +28,7 @@ const ProductsFilter = () => {
       
       <div className={`products-filter__wrapper ${filtersOpen ? 'products-filter__wrapper--open' : ''}`}>
         <div className="products-filter__block">
-          <button type="button">Product type</button>
+          <button type="button">商品類型</button>
           <div className="products-filter__block__content">
             {productsTypes.map(type => (
               <Checkbox 
